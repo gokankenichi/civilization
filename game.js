@@ -298,7 +298,7 @@ updateUnitMenu();
 nextTurnBtn.addEventListener("click", nextTurn);
 
 document.getElementById("howtoButton").addEventListener("click", () => {
-  window.open("howto.html", "_blank");
+  window.open("https://gokankenichi.github.io/civilization/howto.html", "_blank");
 });
 
 canvas.addEventListener("click", (e) => {
