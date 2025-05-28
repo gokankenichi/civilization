@@ -1,0 +1,68 @@
+<!-- 省略せず完全にコピペで使えるHTMLです -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>文明シミュレーションゲーム</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #222;
+      color: white;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    canvas {
+      border: 2px solid white;
+      margin-top: 10px;
+    }
+    #ui {
+      display: flex;
+      justify-content: space-between;
+      width: 1080px;
+      margin-top: 10px;
+      align-items: center;
+    }
+    #turnDisplay {
+      font-size: 18px;
+    }
+    #nextTurnBtn {
+      font-size: 16px;
+      padding: 5px 15px;
+      cursor: pointer;
+    }
+    #buildMenu, #unitMenu {
+      margin-top: 10px;
+      width: 1080px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .buildBtn, .unitBtn {
+      background-color: #444;
+      border: 1px solid #888;
+      color: white;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    .buildBtn:disabled, .unitBtn:disabled {
+      background-color: #222;
+      border-color: #555;
+      color: #777;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <div id="ui">
+    <div id="turnDisplay">ターン: 1</div>
+    <button id="nextTurnBtn">次のターン ▶</button>
+  </div>
+  <canvas id="gameCanvas" width="1080" height="648"></canvas>
+  <div id="buildMenu"></div>
+  <div id="unitMenu"></div>
+  <script src="game.js"></script>
+</body>
+</html>
