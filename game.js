@@ -297,6 +297,9 @@ updateUnitMenu();
 
 nextTurnBtn.addEventListener("click", nextTurn);
 
+document.getElementById("howtoButton").addEventListener("click", () => {
+  window.open("howto.html", "_blank");
+});
 
 canvas.addEventListener("click", (e) => {
   const rect = canvas.getBoundingClientRect();
